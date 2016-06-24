@@ -1,0 +1,5 @@
+guard :rspec, cmd: 'bundle exec rspec --color' do
+  watch(%r{^spwc/.+_spec\.rb$})
+   watch(%r{^lib/(.+)\.rb$}) { |m| "spec/#{m[1]}_spec.rb" }
+  watch(%r{^lib/(.+)\.rb$}) {|m| "pec/server_spec.rb"}
+end
